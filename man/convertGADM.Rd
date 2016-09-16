@@ -31,6 +31,8 @@ Not all countries have the same number of levels. Many just have two levels whil
 \examples{
 \dontrun{
 convertGADM('DE', 1)
+loadSpatialData('GADM_DE_1')
+plot(GADM_DE_1)
 }
 }
 \references{

@@ -269,6 +269,12 @@ codeToState <- function(stateCodes, countryCodes=NULL,
 #' @details For this function to work, you must first run \code{initializeSpatialData()} to
 #' download, convert and install the necessary spatial data.
 #' @return A vector of ISO 3166-2 codes or NA.
+#' @examples 
+#' \dontrun{
+#' stateToCode("Washington")
+#' stateToCode("Barcelona")
+#' stateToCode("Shandong")
+#' }
 #' @seealso convertNaturalEarthAdm1
 stateToCode <- function(stateNames, countryCodes=NULL,
                         dataset='NaturalEarthAdm1') {

@@ -17,6 +17,8 @@
 #' @examples
 #' \dontrun{
 #' convertGADM('DE', 1)
+#' loadSpatialData('GADM_DE_1')
+#' plot(GADM_DE_1)
 #' }
 convertGADM <- function(countryCode=NULL, admLevel=0, nameOnly=FALSE) {
   
@@ -96,9 +98,8 @@ convertGADM <- function(countryCode=NULL, admLevel=0, nameOnly=FALSE) {
     
   }
 
-  # TODO:
-  #   # Group polygons with the same identifier
-  SPDF <- organizePolygons(SPDF, uniqueID='timezone')
+  # Group polygons with the same identifier
+  SPDF <- organizePolygons(SPDF, uniqueID='PID')
   
   # Assign a name and save the data
   assign(datasetName,SPDF)

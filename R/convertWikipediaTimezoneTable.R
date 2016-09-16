@@ -30,7 +30,7 @@ convertWikipediaTimezoneTable <- function() {
   # 4.  Comments; present if and only if the country has multiple rows.
   
   # Get the raw html from the url
-  wikiDoc <- rvest::html(url)
+  wikiDoc <- xml2::read_html(url)
   ###wikiDoc <- rvest::read_html(url) # When rvest 0.3.x is default in more places.
   
   # Get a list of tables in the document
